@@ -47,6 +47,7 @@ class Execution:
         # Copy the content of the html file, and write into a other html file.
         # Try to make a page.
         os.system('cp resources/style.css public/style.css')
+        print(' File "style.css" saved as:' + os.getcwd() + '/public/style.css')
         page = open('public/index.html','w')
         links = open('temp/temp.html')
         page.write('<!DOCTYPE html>\n')
@@ -71,6 +72,9 @@ class Execution:
         page.write('</div>\n')
         page.write('</body>\n')
         page.write('</html>\n')
+        page.close()
+        print(' File "index.html" saved as:' + os.getcwd() + '/public/index.html')
+        os.system('rm -rfv temp')
 def main():
     '''
 The main function, all the things will be begun here.
@@ -80,7 +84,12 @@ The main function, all the things will be begun here.
     Info.ShowLogo()
     parser = Info.GetParser()
     args = parser.parse_args()
-    config = Info.LoadToml('config/config.toml')
+    if os.path.exists(str(os.getenv('XDG_CONFIG_HOME' + '/homepager/config.toml'))) == True:
+        config = Info.LoadToml(os.getenv('XDG_CONFIG_HOME' + '/homepager/config.toml'))
+    elif os.path.exists('/etc/homepager/config.toml') == True:
+        config = Info.LoadToml('/etc/homepager/config.toml')
+    else:
+        config = Info.LoadToml('config/config.toml')
     Exe.StepOne(args.input)
     Exe.StepTwo('temp/temp.html',config['Main']['TopTitle'],config['Main']['Bio'])
 main()
