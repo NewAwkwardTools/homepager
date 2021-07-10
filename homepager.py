@@ -46,7 +46,10 @@ class Execution:
     def StepTwo(self,html,title,bio):
         # Copy the content of the html file, and write into a other html file.
         # Try to make a page.
-        os.system('cp resources/style.css public/style.css')
+        if os.path.exists("/usr/share/homepager/style.css") == True:
+            os.system('cp /usr/share/homepager/style.css public/style.css')
+        else:
+            os.system('cp resources/style.css public/style.css')
         print(' File "style.css" saved as:' + os.getcwd() + '/public/style.css')
         page = open('public/index.html','w')
         links = open('temp/temp.html')
