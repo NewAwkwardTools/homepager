@@ -8,7 +8,7 @@ import toml
 class Information:
     '''
     This class contains the functions which are used to show 
-    something about the program and the helpful informations.
+    something about the program and the helpful information.
     '''
     def ShowLogo(self):
         print('''
