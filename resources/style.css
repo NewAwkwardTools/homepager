@@ -54,7 +54,7 @@ body{
     transition: 200ms;
 }
 .content a:hover{
-    color:#5f54f0;
+    color: pink;
     transition: 200ms;
     font-size: larger;
 }
