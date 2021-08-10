@@ -44,8 +44,9 @@ class Information:
 
 
 class Execution:
+
     def StepOne(self, txt):
-        # The step one, use titlegetter generate a html file from the txt.
+        # The step one, use titlegetter to generate a html file from the txt.
         if os.path.exists('public') == False:
             os.mkdir('public')
         if os.path.exists('temp') == False:
@@ -61,12 +62,23 @@ class Execution:
             os.system('cp resources/style.css public/style.css')
         print(' File "style.css" saved as:' +
               os.getcwd() + '/public/style.css')
+        if os.path.exists("/usr/share/homepager/index.js"):
+            os.system('cp /usr/share/homepager/index.js public/index.js')
+        else:
+            os.system('cp resources/index.js public/index.js')
+        print(' File "index.js" saved as:' + 
+                os.getcwd() + '/public/index.js')
+        if os.path.exists("/usr/share/homepager/searchbar.html"):
+            SearchBar = open('/usr/share/homepager/searchbar.html')
+        else:
+            SearchBar = open('resources/searchbar.html')
         page = open('public/index.html', 'w')
         links = open('temp/temp.html')
         page.write('<!DOCTYPE html>\n')
         page.write('<html>\n')
         page.write('<head>\n')
         page.write('<meta charset="utf-8"/>\n')
+        page.write('<script src="index.js"></script>')
         page.write('<link rel="stylesheet" type="text/css" href="style.css">\n')
         page.write(
             '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
@@ -79,6 +91,7 @@ class Execution:
         page.write('<div class="menu">\n')
         page.write('<p>' + bio + '</p>\n')
         page.write('</div>\n')
+        page.write(SearchBar.read())
         page.write('<div class="grid-container">\n')
         page.write('<div class="content">')
         page.write('<li>' + links.read() + '</li>')

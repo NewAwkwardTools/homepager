@@ -16,6 +16,7 @@ body{
     text-align: center;
     /*opacity:0.8;*/
 }
+
 .toptitle{
     color:white;
     font-size: 48px;
@@ -61,4 +62,50 @@ body{
 
 li{
     list-style-type: none;
+}
+
+.SearchBar{
+		width: auto;
+		background-color: white;
+		box-shadow: #000000 0px 5px 5px;
+		margin: 10px;
+		margin-left: 150px;
+		margin-right: 150px;
+		padding: 10px;
+}
+
+.SearchBar h1{
+		font-size: 30px;
+}
+
+.SearchBar form{
+		margin: 0 auto 25px auto;
+		width: 30%;
+}
+
+.SearchBar input{
+		border: solid 1px #888888;
+		border-radius: 10px;
+}
+
+.SearchBar button{
+		font-size: 18px;
+}
+
+.SearchBar img{
+		margin: 0 auto 25px auto;
+}
+
+.SearchBar .button{
+		background-color: pink;
+		border-radius: 10px;
+		border: solid 1px pink;
+		color: black;
+		box-shadow: #888888 0px 1px 1px;
+}
+
+.SearchBar .button:hover{
+		background-color: white;
+		color: pink;
+		transition: 200ms;
 }
