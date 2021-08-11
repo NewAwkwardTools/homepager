@@ -8,7 +8,7 @@ body{
 .grid-container {
     display: grid;
     grid-template-columns: auto;
-  }
+}
 
 .top{
     padding: 1px;
@@ -34,7 +34,7 @@ body{
 }
 
 .content{
-    box-shadow: #000000 0px 5px 5px;
+    box-shadow: #c4c4c4 0px 5px 5px;
     background-color: white;
     margin: 10px;
     margin-left: 150px;
@@ -67,7 +67,7 @@ li{
 .SearchBar{
     width: auto;
     background-color: white;
-    box-shadow: #000000 0px 5px 5px;
+    box-shadow: #c4c4c4 0px 5px 5px;
     margin: 10px;
     margin-left: 150px;
     margin-right: 150px;
@@ -76,16 +76,20 @@ li{
 
 .SearchBar h1{
     font-size: 30px;
+    text-align: center;
 }
 
 .SearchBar form{
+    text-align: center;
     margin: 0 auto 25px auto;
-    width: 30%;
+    width: 40%;
 }
 
 .SearchBar input{
     border: solid 1px #888888;
     border-radius: 10px;
+    width: 400px;
+    margin-bottom: 5px;
 }
 
 .SearchBar button{
