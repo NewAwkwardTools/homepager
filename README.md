@@ -1,6 +1,6 @@
 # Homepager
 
-![](resources/Pics/image_2021-08-11_13-29-34.png)
+![](resources/Pics/image_2021-08-11_14-14-30.png)
 
 一个简洁的首页生成器
 

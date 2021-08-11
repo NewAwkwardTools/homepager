@@ -89,7 +89,7 @@ li{
     border: solid 1px #888888;
     border-radius: 10px;
     width: 400px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .SearchBar button{
@@ -102,7 +102,7 @@ li{
 
 .SearchBar .button{
     background-color: pink;
-    border-radius: 10px;
+    border-radius: 0px;
     border: solid 1px pink;
     color: black;
     box-shadow: #888888 0px 1px 1px;
