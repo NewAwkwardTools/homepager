@@ -8,7 +8,7 @@ A simple homepage generator.
 
 目前正在开发中..
 
-Under construction now...
+Under developing now...
 
 # Dependency
 
