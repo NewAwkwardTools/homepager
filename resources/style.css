@@ -11,6 +11,9 @@ body{
 }
 
 .top{
+    box-shadow: #c4c4c4 0px 5px 5px;
+    margin-left: 150px;
+    margin-right: 150px;
     padding: 1px;
     background-color: pink;
     text-align: center;
@@ -27,6 +30,8 @@ body{
     padding: 5px;
     box-shadow: #c4c4c4 0px 5px 5px;
     background-color: white;
+    margin-left: 150px;
+    margin-right: 150px;
 }p{
     text-align: center;
     font-size: 16px;
