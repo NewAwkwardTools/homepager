@@ -3,6 +3,9 @@ body{
     margin: 0;
     background-size:100% auto;
     background-color:#f1f1f1;
+    background-image: url('https://w.wallhaven.cc/full/md/wallhaven-md69y9.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .grid-container {
@@ -11,110 +14,100 @@ body{
 }
 
 .top{
-    box-shadow: #c4c4c4 0px 5px 5px;
+    border-radius: 20px;
+    margin-bottom: 10px;
     margin-left: 150px;
     margin-right: 150px;
     padding: 1px;
-    background-color: pink;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 192, 203, 0.2);
     text-align: center;
-    /*opacity:0.8;*/
 }
 
 .toptitle{
     color:white;
     font-size: 48px;
-    /*opacity:0.8;*/
 }
 
-.menu{
-    padding: 5px;
-    box-shadow: #c4c4c4 0px 5px 5px;
-    background-color: white;
-    margin-left: 150px;
-    margin-right: 150px;
-}p{
+.top p{
+    color: white;
     text-align: center;
     font-size: 16px;
     font-family:Arial, Helvetica, sans-serif;
 }
 
 .content{
-    box-shadow: #c4c4c4 0px 5px 5px;
-    background-color: white;
-    margin: 10px;
+    max-height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    margin-bottom: 10px;
     margin-left: 150px;
     margin-right: 150px;
     padding: 10px;
-    /*opacity:0.8;*/
 }
-/*
-.headtitle_in_content{
-    border-bottom: solid black 1px;
-    font-size: 18px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-*/
+
 .content a{
-    color: black;
+    margin-bottom: 10px;
+    color: white;
     text-decoration: none;
     transition: 200ms;
 }
 .content a:hover{
     color: pink;
     transition: 200ms;
-    font-size: larger;
 }
 
-li{
+.content li{
     list-style-type: none;
 }
 
-.SearchBar{
-    width: auto;
-    background-color: white;
-    box-shadow: #c4c4c4 0px 5px 5px;
-    margin: 10px;
-    margin-left: 150px;
-    margin-right: 150px;
+.content ul{
     padding: 10px;
 }
 
-.SearchBar h1{
-    font-size: 30px;
-    text-align: center;
+.content ul:hover{
+    transition: 500ms;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.SearchBar{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: left;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 15px;
 }
 
 .SearchBar form{
-    text-align: center;
-    margin: 0 auto 25px auto;
-    width: 40%;
+    display: flex;
+    justify-content: left;
+    align-content: space-between;
 }
 
 .SearchBar input{
+    border-radius: 20px;
+    flex-grow: 1;
+    overflow: hidden;
+    flex-shrink: 1;
     border: solid 1px #888888;
-    border-radius: 10px;
-    width: 400px;
-    margin-bottom: 10px;
-}
-
-.SearchBar button{
-    font-size: 18px;
+    color: black;
+    font-size: 60px;
+    opacity: 0.2;
 }
 
 .SearchBar img{
-    margin: 0 auto 25px auto;
-}
-
-.SearchBar .button{
-    background-color: pink;
-    border-radius: 0px;
-    border: solid 1px pink;
-    color: black;
-    box-shadow: #888888 0px 1px 1px;
-}
-
-.SearchBar .button:hover{
-    background-color: white;
-    color: pink;
-    transition: 200ms;
+    flex-basis: auto;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin-right: 10px;
 }
