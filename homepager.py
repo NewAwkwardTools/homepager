@@ -87,8 +87,6 @@ class Execution:
         page.write('<body>\n')
         page.write('<div class="top">\n')
         page.write('<h1 class="toptitle">' + title + '</h1>\n')
-        page.write('</div>\n')
-        page.write('<div class="menu">\n')
         page.write('<p>' + bio + '</p>\n')
         page.write('</div>\n')
         page.write(SearchBar.read())
