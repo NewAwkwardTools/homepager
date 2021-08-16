@@ -23,7 +23,7 @@ class Information:
 ────────────────────╔═╝║
 ────────────────────╚══╝
         ''')
-        print('v 1.0 beta')
+        print('v 1.2 beta')
         print('By WeepingDogel')
 
     def GetParser(self):
