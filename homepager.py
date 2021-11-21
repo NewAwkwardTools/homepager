@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Version 1.0 beta
+# Version 1.3 beta
 # By WeepingDogel
 import os
 import argparse
@@ -23,7 +23,7 @@ class Information:
 ────────────────────╔═╝║
 ────────────────────╚══╝
         ''')
-        print('v 1.2 beta')
+        print('v 1.3 beta')
         print('By WeepingDogel')
 
     def GetParser(self):
@@ -45,6 +45,25 @@ class Information:
 
 class Execution:
 
+    def GetCSS(self, config):
+        # Before generating the HTML file, we should get the css.
+        # And we should know which css style the user want.
+        # So add this function to do it.
+        if config['Preference']['Blur'] == False:
+            if os.path.exists("/usr/share/homepager/styleBlurOFF.css"):
+                os.system('cp /usr/share/homepager/styleBlurOFF.css public/style.css')
+            else:
+                os.system('cp resources/styleBlurOFF.css public/style.css')
+            print(' File "styleBlurOFF.css" saved as:' +
+              os.getcwd() + '/public/style.css')
+        elif config['Preference']['Blur'] == True:
+            if os.path.exists("/usr/share/homepager/styleBlurON.css"):
+                os.system('cp /usr/share/homepager/styleBlurON.css public/style.css')
+            else:
+                os.system('cp resources/styleBlurON.css public/style.css')
+            print('File "styleBlurON.css" saved as:' + 
+            os.getcwd() + '/public/style.css')
+
     def StepOne(self, txt):
         # The step one, use titlegetter to generate a html file from the txt.
         if os.path.exists('public') == False:
@@ -56,12 +75,6 @@ class Execution:
     def StepTwo(self, html, title, bio):
         # Copy the content of the html file, and write into a other html file.
         # Try to make a page.
-        if os.path.exists("/usr/share/homepager/style.css"):
-            os.system('cp /usr/share/homepager/style.css public/style.css')
-        else:
-            os.system('cp resources/style.css public/style.css')
-        print(' File "style.css" saved as:' +
-              os.getcwd() + '/public/style.css')
         if os.path.exists("/usr/share/homepager/index.js"):
             os.system('cp /usr/share/homepager/index.js public/index.js')
         else:
@@ -79,7 +92,7 @@ class Execution:
         page.write('<head>\n')
         page.write('<meta charset="utf-8"/>\n')
         page.write('<script src="index.js"></script>')
-        page.write('<link rel="stylesheet" type="text/css" href="style.css">\n')
+        page.write('<link rel="stylesheet" type="text/css" href=style.css>\n')
         page.write(
             '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
         page.write('<title>' + title + '</title>\n')
@@ -112,13 +125,17 @@ The main function, all the things will be begun here.
     Info.ShowLogo()
     parser = Info.GetParser()
     args = parser.parse_args()
-    if os.path.exists(str(os.getenv('XDG_CONFIG_HOME' + '/homepager/config.toml'))) == True:
+    '''
+    if os.path.exists(str(os.getenv('XDG_CONFIG_HOME' + '/homepager/config.toml'))):
         config = Info.LoadToml(
             os.getenv('XDG_CONFIG_HOME' + '/homepager/config.toml'))
-    elif os.path.exists('/etc/homepager/config.toml') == True:
+    elif os.path.exists('/etc/homepager/config.toml'):
         config = Info.LoadToml('/etc/homepager/config.toml')
     else:
-        config = Info.LoadToml('config/config.toml')
+    '''
+    config = Info.LoadToml('config/config.toml')
+    
+    Exe.GetCSS(config)
     Exe.StepOne(args.input)
     Exe.StepTwo('temp/temp.html', config['Main']
                 ['TopTitle'], config['Main']['Bio'])

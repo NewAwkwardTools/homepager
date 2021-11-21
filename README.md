@@ -10,6 +10,8 @@ A simple homepage generator.
 
 Under developing now...
 
+We will add more functions.
+
 # Dependency
 
 * Python 3.6+
@@ -85,3 +87,7 @@ After minutes or seconds, there will also be a directory named `public/` in the 
 1. It's not necessary to name after the  `*.txt` file as `list.txt`, but you should know its location.
 
 2. It's still on the testing stage, there are some problems and bugs we haven't seen. You can post an issue or pull requests.
+
+## Documention
+
+[Click Here]() to read detail docs.

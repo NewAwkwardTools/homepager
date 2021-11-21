@@ -1,3 +1,12 @@
+# Configuration
+
 [Main]
 TopTitle = "HomePage"
 Bio = "Made by WeepingDogel"
+
+[Preference]
+# Edit the option Blur.
+# set 'true' to open the Blur.
+# We will add more settings about Preference in the future.
+# And the documents instructing you to write your own style will be added.
+Blur = false 
