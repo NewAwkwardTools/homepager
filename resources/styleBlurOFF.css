@@ -1,0 +1,112 @@
+body{
+    transition: 1s;
+    margin: 0;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-image: url('https://w.wallhaven.cc/full/md/wallhaven-md69y9.jpg');
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.top{
+    backdrop-filter: blur(0px);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 1px;
+    background-color: rgba(255, 192, 203, 0.8);
+    text-align: center;
+}
+
+.toptitle{
+    color:white;
+    font-size: 48px;
+}
+
+.top p{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.content{
+    max-height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(0px);
+    margin-bottom: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 10px;
+}
+
+.content a{
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 200ms;
+}
+.content a:hover{
+    color: pink;
+    transition: 200ms;
+}
+
+.content li{
+    list-style-type: none;
+}
+
+.content ul{
+    padding: 10px;
+}
+
+.content ul:hover{
+    transition: 500ms;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.SearchBar{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: left;
+    backdrop-filter: blur(0px);
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 15px;
+}
+
+.SearchBar form{
+    display: flex;
+    justify-content: left;
+    align-content: space-between;
+}
+
+.SearchBar input{
+    border-radius: 20px;
+    flex-grow: 1;
+    overflow: hidden;
+    flex-shrink: 1;
+    border: solid 1px #888888;
+    color: black;
+    font-size: 60px;
+    opacity: 0.2;
+}
+
+.SearchBar img{
+    flex-basis: auto;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin-right: 10px;
+}
